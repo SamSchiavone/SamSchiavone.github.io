@@ -30,3 +30,19 @@ latest_posts:
 I am a researcher, programmer, and mathematician who combines mathematical abstraction with computational tools in order to discover, analyze, and elucidate. I have experience in learning abstract results and applying them to produce practical solutions.
 
 Previously I was a research scientist in the <a href="https://math.mit.edu/">mathematics department at MIT</a>, supervised by <a href="https://math.mit.edu/~poonen/">Bjorn Poonen</a> and <a href="https://math.mit.edu/~drew/">Drew Sutherland</a>, as part of the <a href="https://simonscollab.icerm.brown.edu/">Simons Collaboration on Arithmetic Geometry, Number Theory, and Computation</a>. I received my Ph.D. in mathematics from <a href="https://math.dartmouth.edu/">Dartmouth College</a> in 2019 under the supervision of <a href="https://jvoight.github.io/">John Voight</a>.
+
+<!--
+<img src="/assets/img/gifs/ampersand_final.gif" alt="Pencil of conics parametrizing the ampersand curve" style="width:20%;">
+<img src="/assets/img/gifs/cubics_final.gif" alt="Pencil of cubics passing through 9 points" style="width:20%;">
+-->
+
+<!--<div class="col-md-9 mx-auto" style="text-align: center;">-->
+<p style="text-align: center;">
+  <a href="/assets/img/gifs/ampersand_crop3.gif">
+    <img src="/assets/img/gifs/ampersand_crop3.gif" alt="Pencil of conics parametrizing the ampersand curve" style="width:16%; margin-right: 10%;">
+  </a>
+  <a href="/assets/img/gifs/cubics_crop.gif">
+    <img src="/assets/img/gifs/cubics_crop.gif" alt="Pencil of cubics passing through 9 points" style="width:16%;">
+  </a>
+</p>
+<!--</div>-->
