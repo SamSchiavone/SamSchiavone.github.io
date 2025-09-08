@@ -1,34 +1,75 @@
-"adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+#"adams":
+#  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
+#    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
 
-"podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"bommel":
+  - firstname: ["Raymond", "R."]
+    url: https://raymondvanbommel.nl/ 
 
-"rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"costa":
+  - firstname: ["Edgar", "E."]
+    url: https://edgarcosta.org/ 
 
-"bach":
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+"elkies":
+  - firstname: ["Noam", "Noam D.", "N.", "N. D."]
+    url: https://people.math.harvard.edu/~elkies/
 
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+"keller":
+  - firstname: ["Timo", "T."]
+    url: https://timo-keller.de/
 
-"przibram":
-  - firstname: ["Karl"]
-    url: https://link.springer.com/article/10.1007/s00016-019-00242-z
+"voight":
+  - firstname: ["John", "J."]
+    url: https://jvoight.github.io/
 
-"schrodinger":
-  - firstname: ["Erwin"]
-    url: https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger
+"combes":
+  - firstname: ["Lewis", "L."]
+    url: https://lewismcombes.github.io/  
 
-"lorentz":
-  - firstname: ["Hendrik Antoon"]
-    url: https://en.wikipedia.org/wiki/Hendrik_Lorentz
+"paulhus":
+  - firstname: ["Jen", "J.", "Jennifer"]
+    url: https://www.jenpaulhus.com/
 
-"planck":
-  - firstname: ["Max"]
-    url: https://en.wikipedia.org/wiki/Max_Planck
+"jones":
+  - firstname: ["John", "John W.", "J.", "J. W."]
+    url: https://hobbes.la.asu.edu/
+
+"roe":
+  - firstname: ["David", "D."]
+    url: https://math.mit.edu/~roed/
+
+"roy":
+  - firstname: ["Manami", "M."]
+    url: https://manamiroy.github.io/
+
+"sijsling":
+  - firstname: ["Jeroen", "J."]
+    url: https://www.uni-ulm.de/en/mawi/algzt/mitarbeiter/prof-dr-jeroen-sijsling/
+
+"hanselman":
+  - firstname: ["Jeroen", "J."]
+    url: https://hanselmanj.eu/
+
+"pieper":
+  - firstname: ["Andreas", "A."]
+    url: https://andreas-pieper.github.io/
+
+"assaf":
+  - firstname: ["Eran", "E."]
+    url: https://math.mit.edu/~eranasaf/
+
+"babei":
+  - firstname: ["Angelica", "A.", "Angie"]
+    url: https://angelicababei.com/
+
+"breen":
+  - firstname: ["Benjamin", "B.", "Ben"]
+    url: https://www.linkedin.com/in/benjamin-breen-847926204/
+
+"musty":
+  - firstname: ["Michael", "M.", "Mike", "Michael J.", "M. J."]
+    url: https://www.linkedin.com/in/mjmusty/
+
+"klug":
+  - firstname: ["Michael", "M.", "Mike"]
+    url: https://math.uchicago.edu/~michaelklug/

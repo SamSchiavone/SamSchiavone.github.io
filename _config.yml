@@ -193,6 +193,9 @@ exclude:
   - vendor
 # further excludes
   - _pages/blog.md
+  - _pages/cv.md
+  - _pages/dropdown.md
+  - _pages/profiles.md
   - _posts/
 keep_files:
   - CNAME
@@ -266,8 +269,8 @@ display_categories: ["external-services"] # these categories will be displayed o
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Schiavone]
+  first_name: [Sam, Samuel, Samuel S.]
 
   style: apa
   locale: en
