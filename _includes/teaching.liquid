@@ -6,16 +6,8 @@
 {% for course in site.data.teaching %}
 
   {% if forloop.first %}
-    {% if display_names[course.institution] %}
-      <h3>{{ display_names[course.institution] }}</h3>
-    {% else %}
-      <h3>{{ course.institution }}</h3>
-    {% endif %}
-    {% if display_names[course.role] %}
-      <h4>{{ display_names[course.role] }}</h4>
-    {% else %}
-      <h4>{{ course.role}}</h4>
-    {% endif %}
+    <h3>{{ display_names[course.institution] | default: course.institution }}</h3>
+    <h4>{{ display_names[course.role] | default: course.role }}</h4>
     <table class="table table-sm table-borderless" >
       <tbody>
         <tr>
@@ -46,26 +38,14 @@
       </tbody>
       </table>
       {% if course.institution != prev_institution %}
-        {% if display_names[course.institution] %}
-          <h3>{{ display_names[course.institution] }}</h3>
-        {% else %}
-          <h3>{{ course.institution }}</h3>
-        {% endif %}
-        {% if display_names[course.role] %}
-          <h4>{{ display_names[course.role] }}</h4>
-        {% else %}
-          <h4>{{ course.role}}</h4>
-        {% endif %}
+        <h3>{{ display_names[course.institution] | default: course.institution }}</h3>
+        <h4>{{ display_names[course.role] | default: course.role }}</h4>
         <table class="table table-sm table-borderless">
           <tbody>
       {% else %}
         {% comment %} so role must be different {% endcomment %}
-        {% if display_names[course.role] %}
-          <h4>{{ display_names[course.role] }}</h4>
-        {% else %}
-          <h4>{{ course.role}}</h4>
-        {% endif %}
-        <table class="table table-sm table-borderless">
+        <h4>{{ display_names[course.role] | default: course.role }}</h4>
+          <table class="table table-sm table-borderless">
           <tbody>
       {% endif %}
     {% endif %}
