@@ -16,13 +16,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "nav-projects",
-          title: "projects",
-          description: "A growing collection of your cool projects.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/projects/";
-          },
         },{id: "nav-repositories",
           title: "repositories",
           description: "",
@@ -64,16 +57,17 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
+            },},{id: "news-some-collaborators-and-i-have-solved-an-open-case-of-the-inverse-galois-problem-we-have-realized-the-transitive-group-17t7-as-a-galois-group-over-mathbb-q-here-s-the-polynomial-we-found-begin-align-x-17-amp-amp-2-x-16-12-x-15-28-x-14-60-x-13-160-x-12-200-x-11-500-x-10-705-x-9-886-x-8-amp-amp-2024-x-7-604-x-6-2146-x-5-80-x-4-1376-x-3-496-x-2-1013-x-490-end-align",
+          title: 'Some collaborators and I have solved an open case of the Inverse Galois...',
           description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
+          section: "News",},{id: "news-our-preprint-17t7-is-a-galois-group-over-the-rationals-is-now-on-arxiv-the-new-polynomial-has-also-been-added-to-the-lmfdb-and-the-klüners-malle-database",
+          title: 'Our preprint 17T7 is a Galois group over the rationals is now on...',
           description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+          section: "News",},{id: "news-some-collaborators-and-i-have-discovered-explicit-equations-for-2-families-of-abelian-4-folds-of-mumford-type-explicit-examples-have-been-sought-after-for-many-years-see-this-blog-post-by-frank-calegari-for-more-details-stay-tuned-for-our-preprint",
+          title: 'Some collaborators and I have discovered explicit equations for 2 families of abelian...',
+          description: "",
+          section: "News",},{id: "news-i-am-speaking-at-lucant-2025-in-providence-on-july-9th-i-will-talk-about-a-new-section-of-the-lmfdb-on-finite-groups-that-i-helped-develop-for-details-see-our-preprint-which-will-be-published-in-the-conference-proceedings-pitchayut-mark-saengrungkongka-an-mit-undergrad-is-also-speaking-at-lucant-i-mentored-mark-and-noah-walsh-last-summer-as-they-worked-on-a-research-project-on-gluing-curves-along-their-torsion-a-project-based-on-my-article-with-jeroen-hanselman-and-jeroen-sijsling-congrats-to-mark-and-noah-on-a-very-successful-project-you-can-find-their-preprint-here",
+          title: 'I am speaking at LuCaNT 2025 in Providence on July 9th. I will...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
