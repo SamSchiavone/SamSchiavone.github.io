@@ -1,0 +1,105 @@
+{% assign display_names = site.data.teaching_names %}
+
+{% assign prev_institution = '' %}
+{% assign prev_role = '' %}
+
+{% for course in site.data.teaching %}
+
+  {% if forloop.first %}
+    {% if display_names[course.institution] %}
+      <h3>{{ display_names[course.institution] }}</h3>
+    {% else %}
+      <h3>{{ course.institution }}</h3>
+    {% endif %}
+    {% if display_names[course.role] %}
+      <h4>{{ display_names[course.role] }}</h4>
+    {% else %}
+      <h4>{{ course.role}}</h4>
+    {% endif %}
+    <table class="table table-sm table-borderless" >
+      <tbody>
+        <tr>
+          <td>
+            {{ course.course_number }}
+           </td>
+          {% if course.link%}
+          <td>
+            <a href="{{ course.link }}">{{ course.course_title }}</a>
+          {% else %}
+          <td>
+            {{ course.course_title }}
+          {% endif %}
+          {% if course.syllabus %}
+          (<a href="{{ course.syllabus }}">syllabus</a>)
+          {% endif %}
+          </td>
+          <td>
+            {{ course.when }}
+          </td>
+        </tr>
+
+    {% assign prev_institution = course.institution %}
+    {% assign prev_role = course.role %}
+
+  {% else %}
+    {% if (course.institution != prev_institution or course.role != prev_role) %}
+      </tbody>
+      </table>
+      {% if course.institution != prev_institution %}
+        {% if display_names[course.institution] %}
+          <h3>{{ display_names[course.institution] }}</h3>
+        {% else %}
+          <h3>{{ course.institution }}</h3>
+        {% endif %}
+        {% if display_names[course.role] %}
+          <h4>{{ display_names[course.role] }}</h4>
+        {% else %}
+          <h4>{{ course.role}}</h4>
+        {% endif %}
+        <table class="table table-sm table-borderless">
+          <tbody>
+      {% else %}
+        {% comment %} so role must be different {% endcomment %}
+        {% if display_names[course.role] %}
+          <h4>{{ display_names[course.role] }}</h4>
+        {% else %}
+          <h4>{{ course.role}}</h4>
+        {% endif %}
+        <table class="table table-sm table-borderless">
+          <tbody>
+      {% endif %}
+    {% endif %}
+    
+    <tr>
+      <td>
+        {{ course.course_number }}
+       </td>
+      {% if course.link%}
+      <td>
+        <a href="{{ course.link }}">{{ course.course_title }}</a>
+      {% else %}
+      <td>
+        {{ course.course_title }}
+      {% endif %}
+      {% if course.syllabus %}
+        {% if course.syllabus contains '://' %}
+          (<a href="{{ course.syllabus }}">syllabus</a>)
+        {% else %}
+          (<a href="{{ course.syllabus | prepend: '/assets/pdf/' | relative_url }}" target="_blank">syllabus</a>)
+        {% endif %}
+      {% endif %}
+      </td>
+      <td>
+        {{ course.when }}
+      </td>
+    </tr>
+    
+    {% assign prev_institution = course.institution %}
+    {% assign prev_role = course.role %}
+  {% endif %}
+{% endfor %}
+
+{% if site.data.teaching.size > 0 %}
+  </tbody>
+</table>
+{% endif %}
