@@ -5,6 +5,11 @@ window.MathJax = {
       ["$", "$"],
       ["\\(", "\\)"],
     ],
+    displayMath: [
+      ["$$", "$$"],
+      ["\\[", "\\]"],
+    ],
+    packages: {'[+]': ['ams', 'color', 'html']},
   },
   options: {
     renderActions: {
@@ -23,4 +28,7 @@ window.MathJax = {
       ],
     },
   },
+  loader: {
+    load: ['[tex]/ams']
+  }
 };

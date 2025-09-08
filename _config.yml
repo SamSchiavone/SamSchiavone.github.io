@@ -161,6 +161,7 @@ markdown: kramdown
 highlighter: rouge
 kramdown:
   input: GFM
+  math_engine: mathjax
   syntax_highlighter_opts:
     css_class: "highlight"
     span:
@@ -195,6 +196,7 @@ exclude:
   - _pages/blog.md
   - _pages/cv.md
   - _pages/dropdown.md
+  - _pages/projects.md
   - _pages/profiles.md
   - _posts/
 keep_files:

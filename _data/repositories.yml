@@ -8,11 +8,12 @@ github_repos:
   #- SamSchiavone/Mumford-type # currently private
   - SamSchiavone/17T7
   - SamSchiavone/Gm-Reduce
+  - LMFDB/lmfdb
+  - JHanselman/reconstructing-g4 
+  - JRSijsling/gluing
+  - Andreas-Pieper/Genus-4-RM-CM 
+  - edgarcosta/EichlerShimuraHMF
   - SamSchiavone/primitive-belyi-maps
   - SamSchiavone/belyi-complementary-maps
-  - LMFDB/lmfdb 
-  - JHanselman/reconstructing-g4 
-  - JRSijsling/gluing 
-  - Andreas-Pieper/Genus-4-RM-CM 
-  - edgarcosta/hilbertmodularforms 
+  - edgarcosta/hilbertmodularforms
   - edgarcosta/hilbertmodularsurfacesdata
