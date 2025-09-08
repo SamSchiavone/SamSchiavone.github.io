@@ -17,14 +17,4 @@ nav_order: 2
 
 {% bibliography %}
 
-@misc{17T7,
- author = {van Bommel, Raymond and Costa, Edgar and Elkies, Noam D. and Keller, Timo and Schiavone, Sam and Voight, John},
- title = {17T7 is a {Galois} group over the rationals},
- year = {2025},
- howpublished = {Preprint, {arXiv}:2411.07857 [math.{NT}] (2025)},
- keywords = {12F12,11F80,11F41,14G10},
- url = {https://arxiv.org/abs/2411.07857},
- arXiv = {arXiv:2411.07857}
-}
-
 </div>
