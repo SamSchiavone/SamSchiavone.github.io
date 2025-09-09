@@ -1,0 +1,184 @@
+\documentclass[reqno, 12pt]{amsart}
+
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amsxtra}
+\usepackage{mathrsfs}
+\usepackage{comment}
+\usepackage{graphicx}
+\usepackage{placeins}
+\usepackage{multicol}
+\usepackage{bbm}
+\usepackage{stmaryrd}
+%\usepackage{enumerate}
+\usepackage[inline, shortlabels]{enumitem}
+\usepackage{mathdots}
+\usepackage{colonequals}
+\usepackage{hyperref}
+
+
+\usepackage{calc}
+\usepackage{tikz}
+\usetikzlibrary{arrows,calc,automata,shadows,backgrounds,positioning,intersections,fadings,decorations.pathreplacing,shapes,matrix}
+\usepackage{tikz-cd}
+
+\usepackage{fullpage}
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{prop}[thm]{Proposition}
+\theoremstyle{definition}  
+\newtheorem{defn} [thm] {Definition} 
+\newtheorem{claim}[thm]{Claim}
+\newtheorem{example} [thm] {Example}
+\newtheorem{rem} [thm] {Remark}
+
+\newenvironment{problab}[1]
+{\noindent\textbf{Problem #1}.}
+{\vskip 6pt}
+
+\newenvironment{exolab}[1]
+{\noindent\textbf{Exercise #1}.}
+{\vskip 6pt}
+
+\theoremstyle{remark}
+\newtheorem*{soln}{Solution}
+
+\newcommand{\C}{\mathbb C}
+\renewcommand{\H}{\mathbb H}
+\newcommand{\D}{\mathbb D}
+\newcommand{\F}{\mathbb F}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\T}{\mathbb T}
+\renewcommand{\P}{\mathbb P}
+\renewcommand{\O}{\mathcal O}
+\newcommand{\m}{\mathfrak m}
+\newcommand{\A}{\mathbb A}
+\renewcommand{\SS}{\mathbb S}
+
+\newcommand{\B}{\mathcal B}
+\newcommand{\E}{\mathcal E}
+
+\newcommand{\SSpan}{\text{span}}
+
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\img}{img}
+\DeclareMathOperator{\Ann}{Ann}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\ad}{ad}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\rank}{rank}
+
+\DeclareMathOperator{\id}{id}
+
+\usepackage{mathpazo}
+
+\everymath{\displaystyle}
+
+\tikzset{commutative diagrams/.cd, arrow style = tikz, diagrams = {>=latex}}
+
+\newenvironment{amatrix}[1]{%
+  \left(\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+  \end{array}\right)
+}
+
+\usepackage{abstract}
+\renewcommand{\abstractname}{}    % clear the title
+\renewcommand{\absnamepos}{empty} % originally center
+%\setlength{\abstitleskip}
+
+\begin{document}
+%\renewcommand{\abstractname}{\vspace{-\baselineskip}}
+
+\title{18.700 Problem Set 2}
+%\author{Évariste Galois}
+\dedicatory{Due Wednesday, September 18 at 11:59 pm on \href{https://canvas.mit.edu/courses/27315}{Canvas}}
+%\thanks{}
+%\contrib{}
+%\address{}
+
+\maketitle
+
+\begin{abstract}
+  \noindent Collaborated with:\\
+  Sources used: 
+\end{abstract}
+\vskip 0.5cm
+
+\noindent
+\textbf{Note:} When using one or more of the vector space axioms in your solutions, make sure to indicate which axioms are being used and how. E.g., ``\dots where the second equality follows by associativity of scalar multiplication.''
+\vskip 0.5cm
+
+\begin{problab}{1} (6 points)
+  \begin{enumerate}[(a)]
+    \item 
+      Suppose a $3 \times 5$ \emph{coefficient} matrix for a linear system has $3$ pivot columns. Is the system consistent? Why or why not?
+    \item
+      Suppose a linear system has a $3 \times 5$ \emph{augmented} matrix whose fifth columns is a pivot column. Is the system consistent? Why or why not?
+    \item
+      Suppose the coefficient matrix of a system of linear equations has a pivot position in every row. Explain why the system must be consistent.
+  \end{enumerate}
+\end{problab}
+
+\begin{problab}{2} (1B, \#2) (5 points)
+  Suppose $a \in \F, v \in V$, and $av = 0$. Prove that $a=0$ or $v=0$.
+\end{problab}
+
+\begin{problab}{3} (4 points)
+  Let $W$ be the union of the first and third quadrants in $\R^2$, i.e.,
+  \begin{equation*}
+    W \colonequals \{(x,y) \in \R^2 : xy \geq 0\} \, .
+  \end{equation*}
+  \begin{enumerate}[(a)]
+    \item Show that $cw \in W$ for all $c \in \R$ and all $w \in W$.
+    \item Is $W$ a vector space? Why or why not?
+  \end{enumerate}
+\end{problab}
+
+\begin{problab}{4} (1B, \#6) (3 points)
+  Let $\infty$ and $-\infty$ denote two distinct objects, neither of which is in $\R$. Define an addition and scalar multiplication on $\R \cup\{\infty,-\infty\}$ as follows. The sum and product of two real numbers is as usual, and for $t \in \R$ define
+$$
+t \infty=
+\begin{cases}
+  -\infty & \text { if } t<0, \\
+  0 & \text { if } t=0, \\
+  \infty & \text { if } t>0,
+\end{cases}
+\qquad
+t(-\infty)=
+\begin{cases}
+  \infty & \text { if } t<0, \\
+  0 & \text { if } t=0, \\
+  -\infty & \text { if } t>0,
+\end{cases}
+$$
+and
+$$
+\begin{aligned}
+  t+\infty & =\infty+t=\infty+\infty=\infty, \\
+  t+(-\infty) & =(-\infty)+t=(-\infty)+(-\infty)=-\infty, \\
+  \infty+(-\infty) & =(-\infty)+\infty=0 .
+\end{aligned}
+$$
+With these operations of addition and scalar multiplication, is $\R \cup\{\infty,-\infty\}$ a vector space over $\R$? Explain.
+\end{problab}
+
+\begin{problab}{5} (6 points)
+  Let $U = \{0\}$ and define $0 + 0 = 0$ and $\lambda \, 0 = 0$ for all $\lambda \in \F$. Prove that $U$ is a vector space by verifying each of the vector space axioms.
+\end{problab}
+
+
+\end{document} 	

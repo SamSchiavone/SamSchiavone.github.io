@@ -1,0 +1,241 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ------- Set Defaults --------- */
+html, head, body, 
+h1, h2, h3, h4, h5, h6, 
+div, span, p, blockquote, code, img, a,
+table, caption, tr, thead, th, tbody, td,
+ul, ol, li, label, form, fieldset {
+	font: 100% Arial, Helvetica, sans-serif;	
+}
+
+/* -------- General Styles --------- */
+
+body{
+	border-top: 2rem  #2092b7 solid; /*change top border color here */
+	margin: 0 0 0 0;
+	padding: 2rem;
+	color: #333;
+    background-color:#FFF;	
+}
+
+#page {
+	width: 100%;
+	margin: auto;
+	max-width: 800px;
+}
+
+p {  
+	font-size: 1rem;
+	color: #404040;
+	line-height: 1.3em;
+	margin: 0 0 .5em 0;
+}
+
+a:link,
+a:visited {
+	color: #075f78;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a:hover{
+	text-decoration: underline;
+	color: #c67e09;
+}
+
+h1{
+    font-size: 1.4rem;
+	color: #404040;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+h2 {
+	text-transform: uppercase;
+	color: #6e121f;
+	font-size: 1.1rem;
+	font-weight: bold;
+}
+
+h3 {
+	font-weight: bold;
+    color: #6D121F;
+}
+
+h4 {
+	font-weight: bold;
+}
+
+ul li,
+ol li {
+	margin: .5rem 0;
+}
+
+ol ol li {
+	list-style: lower-alpha;
+}
+
+hr {
+	color: #CCC;
+}
+
+table {
+	width: 100%;
+	margin: 1rem 0;
+	border-collapse: collapse;
+	border: 1px solid #ddd;
+}
+
+table caption {
+	font-weight: bold;
+	color: #6D121F;
+	padding-bottom: .5rem;
+}
+
+tr:nth-child(even){
+	background-color: #f2f2f2
+}
+
+td {
+	padding: .3rem;
+	min-width: 50px;
+    white-space: nowrap;
+	/*min-width: 150px;*/
+}
+
+th {
+	padding: .3rem;
+	text-align: left;
+	font-weight: bold;
+}
+
+.schedule {
+	overflow-x: auto;
+}
+
+
+
+/* -------- Header --------- */
+
+header {
+	display: flex;
+	align-items: top;
+}
+
+header h1 {
+	margin-left: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+	header {
+		flex-wrap: wrap;
+	}
+
+	header h1 {
+		margin: 0;
+		text-align: center;
+	}
+
+	.logo {
+		text-align: center;
+		width: 100%;
+		margin-bottom: 1rem;
+	}
+}
+
+/* -------- Navigation --------- */
+
+nav ul {
+	list-style: none;
+	display: flex;
+	padding: 0;
+}
+
+nav ul li {
+	padding: 0 1rem 0 0;
+	margin: 0 1rem 0 0;
+	border-right: 1px solid #CCC;
+}
+
+nav ul li:last-child {
+	border-right: 0;
+}
+
+nav li.selected a {
+	color: #6e121f;
+}
+
+@media screen and (max-width: 600px) {
+	nav ul {
+		flex-wrap: wrap;
+	}
+
+	nav ul li {
+		margin-bottom: 1rem;
+	}
+}
+
+/* -------- Main --------- */
+
+main {
+	padding: 1rem 0;
+	border-top: 2px solid #666;
+	border-bottom: 2px solid #666;
+	margin-bottom: 1rem;
+}
+
+
+/* -------- Homepage --------- */
+
+.course_info {
+	display: flex;
+	margin-top: 1rem;
+	flex-wrap: wrap;
+	margin-bottom: 2rem;
+}
+
+.course_info div {
+	flex-basis: 50%;
+}
+
+.description, 
+.updates {
+	border-top: 1px solid #CCC;
+	padding-top: .2rem;
+	margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+	.course_info div {
+		flex-basis: 100%;
+	}
+}
+
+/* -------- Footer --------- */
+
+footer {
+	display: flex;
+	justify-content: space-between;
+}
+
+footer .links p {
+	margin-bottom: .2rem;
+	font-size: .9rem;
+}
+
+@media screen and (max-width: 600px) {
+	footer {
+		flex-wrap: wrap;
+	}
+
+	footer p {
+		text-align: center;
+		width: 100%;
+	}
+
+	footer .links {
+		width: 100%;
+	}
+}

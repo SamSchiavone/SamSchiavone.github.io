@@ -1,0 +1,184 @@
+\documentclass[reqno, 12pt]{amsart}
+
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amsxtra}
+\usepackage{mathrsfs}
+\usepackage{comment}
+\usepackage{graphicx}
+\usepackage{placeins}
+\usepackage{multicol}
+\usepackage{bbm}
+\usepackage{stmaryrd}
+%\usepackage{enumerate}
+\usepackage[inline, shortlabels]{enumitem}
+\usepackage{mathdots}
+\usepackage{colonequals}
+\usepackage{hyperref}
+
+
+\usepackage{calc}
+\usepackage{tikz}
+\usetikzlibrary{arrows,calc,automata,shadows,backgrounds,positioning,intersections,fadings,decorations.pathreplacing,shapes,matrix}
+\usepackage{tikz-cd}
+
+\usepackage{fullpage}
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{prop}[thm]{Proposition}
+\theoremstyle{definition}  
+\newtheorem{defn} [thm] {Definition} 
+\newtheorem{claim}[thm]{Claim}
+\newtheorem{example} [thm] {Example}
+\newtheorem{rem} [thm] {Remark}
+
+\newenvironment{problab}[1]
+{\noindent\textbf{Problem #1}.}
+{\vskip 6pt}
+
+\newenvironment{exolab}[1]
+{\noindent\textbf{Exercise #1}.}
+{\vskip 6pt}
+
+\theoremstyle{remark}
+\newtheorem*{soln}{Solution}
+
+\newcommand{\C}{\mathbb C}
+\renewcommand{\H}{\mathbb H}
+\newcommand{\D}{\mathbb D}
+\newcommand{\F}{\mathbb F}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\T}{\mathbb T}
+\renewcommand{\P}{\mathbb P}
+\renewcommand{\O}{\mathcal O}
+\newcommand{\m}{\mathfrak m}
+\newcommand{\A}{\mathbb A}
+\renewcommand{\SS}{\mathbb S}
+
+\newcommand{\B}{\mathcal B}
+\newcommand{\E}{\mathcal E}
+
+\newcommand{\SSpan}{\text{span}}
+
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\img}{img}
+\DeclareMathOperator{\Ann}{Ann}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\ad}{ad}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\rank}{rank}
+
+\DeclareMathOperator{\id}{id}
+
+\usepackage{mathpazo}
+
+\everymath{\displaystyle}
+
+\tikzset{commutative diagrams/.cd, arrow style = tikz, diagrams = {>=latex}}
+
+\newenvironment{amatrix}[1]{%
+  \left(\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+  \end{array}\right)
+}
+
+\usepackage{abstract}
+\renewcommand{\abstractname}{}    % clear the title
+\renewcommand{\absnamepos}{empty} % originally center
+%\setlength{\abstitleskip}
+
+\begin{document}
+%\renewcommand{\abstractname}{\vspace{-\baselineskip}}
+
+\title{18.700 Problem Set 3}
+%\author{Évariste Galois}
+\dedicatory{Due Wednesday, September 25 at 11:59 pm on \href{https://canvas.mit.edu/courses/27315}{Canvas}}
+%\thanks{}
+%\contrib{}
+%\address{}
+
+\maketitle
+
+\begin{abstract}
+  \noindent Collaborated with:\\
+  Sources used: 
+\end{abstract}
+\vskip 0.5cm
+
+\begin{problab}{1} (2A \#5) (5 points)
+  \begin{enumerate}[(a)]
+    \item 
+      Find a number $t \in \R$ such that
+      \begin{equation*}
+        (3,1,4),\ (2,-3,5),\ (5,9,t)
+      \end{equation*}
+      is linearly dependent in $\R^3$.
+    \item
+      For the value of $t$ found in the previous part, determine the smallest $k \in \{1,2,3\}$ such that $v_k \in \SSpan(v_1, \ldots, v_{k-1})$. Express the $v_k$ as a linear combination of $v_1, \ldots, v_{k-1}$.
+  \end{enumerate}
+\end{problab}
+
+\begin{problab}{2} (2A \#7) (5 points)
+  \begin{enumerate}[(a)]
+    \item 
+      Show that if we consider $\C$ as vector space over $\R$, the list $1+i, 1-i$ is linearly independent.
+    \item
+      Show that if we consider $\C$ as vector space over $\C$, the list $1+i, 1-i$ is linearly dependent.
+  \end{enumerate}
+\end{problab}
+
+\begin{problab}{3} (2A \#13) (6 points)
+  Suppose that $v_1, \ldots, v_m \in V$ are linearly independent and $w \in V$. Show that $v_1, \ldots, v_m, w$ are linearly independent iff $w \notin \SSpan(v_1, \ldots, v_m)$.
+\end{problab}
+
+\begin{problab}{4} (1C \#24) (10 points) % p. 26
+  Let $f: \R \to \R$ be a function.
+  \begin{itemize}
+    \item $f$ is called \textit{even} if $f(-x) = f(x)$ for all $x \in \R$.
+    \item $f$ is called \textit{odd} if $f(-x) = -f(x)$ for all $x \in \R$.
+  \end{itemize}
+  Let
+  \begin{align*}
+    V_e &\colonequals \{f: \R \to \R \mid \text{$f$ is even}\}, \ \text{and}\\
+    V_o &\colonequals \{f: \R \to \R \mid \text{$f$ is odd}\} \, .
+  \end{align*}
+  \begin{enumerate}[(a)]
+    \item 
+      Show that $V_e$ and $V_o$ are subspaces of $\R^{\R}$.
+    \item
+      Show that $\R^{\R} = V_e \oplus V_o$.
+  \end{enumerate}
+\end{problab}
+
+\begin{problab}{5} (11 points)
+  Consider the following subspaces of $\F^3$:
+  \begin{align*}
+    V_1 &\colonequals \{(x,y,0) \in \F^3 \mid x,y \in \F\}\\
+    V_2 &\colonequals \{(x,0,z) \in \F^3 \mid x,z \in \F\}\\
+    V_3 &\colonequals \{(0,y,z) \in \F^3 \mid y,z \in \F\} \, .
+  \end{align*}
+  \begin{enumerate}[(a)]
+    \item Compute $V_1 \cap V_2 \cap V_3$.
+    \item Is the sum $V_1 + V_2 + V_3$ direct? Why or why not?
+    \item Prove the following generalized criterion for a sum to be direct. Let $V$ be a vector space and $V_1, \ldots, V_m$ be subspaces of $V$. Then the sum $V_1 + \cdots + V_m$ is direct iff
+      \begin{equation*}
+        V_j \cap \left( \sum_{i \neq j} V_i \right) = V_j \cap \left(V_1 + \cdots V_{j-1} + V_{j+1} + \cdots + V_m \right) = \{0\}
+      \end{equation*}
+      for each $j = 1, \ldots, m$.
+  \end{enumerate}
+\end{problab}
+
+\end{document} 	

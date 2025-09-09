@@ -1,0 +1,184 @@
+\documentclass[reqno, 12pt]{amsart}
+
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amsxtra}
+\usepackage{mathrsfs}
+\usepackage{comment}
+\usepackage{graphicx}
+\usepackage{placeins}
+\usepackage{multicol}
+\usepackage{bbm}
+\usepackage{stmaryrd}
+%\usepackage{enumerate}
+\usepackage[inline, shortlabels]{enumitem}
+\usepackage{mathdots}
+\usepackage{colonequals}
+\usepackage{hyperref}
+
+
+\usepackage{calc}
+\usepackage{tikz}
+\usetikzlibrary{arrows,calc,automata,shadows,backgrounds,positioning,intersections,fadings,decorations.pathreplacing,shapes,matrix}
+\usepackage{tikz-cd}
+
+\usepackage{fullpage}
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{prop}[thm]{Proposition}
+\theoremstyle{definition}  
+\newtheorem{defn} [thm] {Definition} 
+\newtheorem{claim}[thm]{Claim}
+\newtheorem{example} [thm] {Example}
+\newtheorem{rem} [thm] {Remark}
+
+\newenvironment{problab}[1]
+{\noindent\textbf{Problem #1}.}
+{\vskip 6pt}
+
+\newenvironment{exolab}[1]
+{\noindent\textbf{Exercise #1}.}
+{\vskip 6pt}
+
+\theoremstyle{remark}
+\newtheorem*{soln}{Solution}
+
+\newcommand{\C}{\mathbb C}
+\renewcommand{\H}{\mathbb H}
+\newcommand{\D}{\mathbb D}
+\newcommand{\F}{\mathbb F}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\T}{\mathbb T}
+\renewcommand{\P}{\mathcal P}
+\renewcommand{\O}{\mathcal O}
+\newcommand{\m}{\mathfrak m}
+\newcommand{\A}{\mathbb A}
+\renewcommand{\SS}{\mathbb S}
+\renewcommand{\L}{\mathcal L}
+
+\newcommand{\B}{\mathcal B}
+\newcommand{\E}{\mathcal E}
+
+\newcommand{\SSpan}{\text{span}}
+
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\img}{img}
+\DeclareMathOperator{\Ann}{Ann}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\ad}{ad}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\minpoly}{minpoly}
+
+\DeclareMathOperator{\id}{id}
+
+\usepackage{mathpazo}
+
+\everymath{\displaystyle}
+
+\tikzset{commutative diagrams/.cd, arrow style = tikz, diagrams = {>=latex}}
+
+\newenvironment{amatrix}[1]{%
+  \left(\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+  \end{array}\right)
+}
+
+\usepackage{abstract}
+\renewcommand{\abstractname}{}    % clear the title
+\renewcommand{\absnamepos}{empty} % originally center
+%\setlength{\abstitleskip}
+
+\begin{document}
+%\renewcommand{\abstractname}{\vspace{-\baselineskip}}
+
+\title{18.700 Problem Set 6}
+%\author{Évariste Galois}
+\dedicatory{Due Wednesday, October 30 at 11:59 pm on \href{https://canvas.mit.edu/courses/27315}{Canvas}}
+%\thanks{}
+%\contrib{}
+%\address{}
+
+\maketitle
+
+\begin{abstract}
+  \noindent Collaborated with:\\
+  Sources used: 
+\end{abstract}
+\vskip 0.5cm
+
+%\begin{problab}{1} (5B \#12) (10 points)
+%  Define $T \in \L(\F^n)$ by
+%  \begin{equation*}
+%    T(x_1, x_2, x_3, \ldots, x_n) = (x_1, 2 x_2, 3 x_3, \ldots, n x_n) \, .
+%  \end{equation*}
+%  Find the minimal polynomial of $T$.
+%\end{problab}
+
+\begin{problab}{1} (5B \#21) (5 points)
+  Suppose $V$ is finite-dimensional and $T \in \L(V)$. Prove that the minimal polynomial of $T$ has degree at most $1 + \dim(\img(T))$. (Observe that if $\dim(\img(T)) < \dim(V) - 1$, then this exercise gives a better upper bound for the degree of $\minpoly(T)$.) (\textit{Hint}: Recall that $\img(T)$ is $T$-invariant.)
+\end{problab}
+
+%\begin{soln}
+%\end{soln}
+
+\begin{problab}{2} (5B \#22) (6 points)
+  Suppose $V$ is finite-dimensional and $T \in \L(V)$. Prove that $T$ is invertible iff $I \in \SSpan(T, T^2, \ldots, T^{\dim(V)})$.
+\end{problab}
+
+\begin{problab}{3} (5C \#6) (5 points)
+  Suppose $\F = \C$, $V$ is finite-dimensional and $T \in \L(V)$. Prove that $V$ has a $k$-dimensional $T$-invariant subspace for each $k = 1, \ldots, \dim(V)$.
+\end{problab}
+
+\begin{problab}{4} (5C \#11) (6 points)
+  A square matrix is \textit{lower-triangular} if all its entries above the diagonal are $0$. Suppose $\F = \C$ and $V$ is finite-dimensional. Prove that if $T \in \L(V)$, then there exists a basis of $V$ with respect to which $T$ has a lower-triangular matrix.
+\end{problab}
+
+\begin{problab}{5} (5D \#1) (7 points)
+  Suppose $V$ is a finite-dimensional $\C$-vector space and $T \in \L(V)$.
+  \begin{enumerate}[(a)]
+    \item 
+      Prove that if $T^4 = I$, then $T$ is diagonalizable.
+    \item
+      Prove that if $T^4 = T$, then $T$ is diagonalizable.
+    \item
+      Give an example of an operator $T \in \L(\C^2)$ such that $T^4 = T^2$ and $T$ is not diagonalizable. (Make sure to justify why your $T$ is not diagonalizable.)
+  \end{enumerate}
+\end{problab}
+
+\begin{problab}{6} (5D \#21) (12 points)
+  The \textit{Fibonacci sequence} $F_0, F_1, F_2, \ldots$ is defined by
+  \begin{equation*}
+    F_0 = 0, \ F_1 = 1, \ \text{and} \ F_n = F_{n-2} + F_{n-1} \ \text{for $n \geq 2$.}
+  \end{equation*}
+    Define $T \in \L(\R^2)$ by $T(x,y) = (y, x+y)$.
+    \begin{enumerate}[(a)]
+      \item 
+        Show that $T^n(0,1) = (F_n, F_{n+1})$ for each $n \in \Z_{\geq 0}$.
+      \item
+        Find the eigenvalues of $T$.
+      \item
+        Find a basis of $\R^2$ consisting of eigenvectors of $T$.
+      \item
+        Use the solution to (c) to compute $T^n(0,1)$. Conclude that
+        \begin{equation*}
+          F_n = \frac{1}{\sqrt{5}} \left[ \left( \frac{1+\sqrt{5}}{2} \right)^n - \left( \frac{1 - \sqrt{5}}{2} \right)^n \right]
+        \end{equation*}
+        for each $n \in \Z_{\geq 0}$. (The number $(1+\sqrt{5})/2$ is called the \textit{golden ratio}.)
+    \end{enumerate}
+\end{problab}
+
+\end{document} 	
