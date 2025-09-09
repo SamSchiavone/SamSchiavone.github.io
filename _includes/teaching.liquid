@@ -35,7 +35,7 @@
     <td>{{ course.course_number }}</td>
     <td>
       {% if course.link %}
-        <a href="{{ course.link }}">{{ course.course_title }}</a>
+        <a href="{{ course.link }}" target="_blank">{{ course.course_title }}</a>
       {% else %}
         {{ course.course_title }}
       {% endif %}
