@@ -1,66 +1,45 @@
 {% assign display_names = site.data.teaching_names %}
+{% assign courses_sorted = site.data.teaching | sort: 'sort_order' | reverse %}
 
 {% assign prev_institution = '' %}
 {% assign prev_role = '' %}
+{% assign is_first_item = true %}
 
-{% for course in site.data.teaching %}
-
-  {% if forloop.first %}
-    <h3>{{ display_names[course.institution] | default: course.institution }}</h3>
-    <h4>{{ display_names[course.role] | default: course.role }}</h4>
-    <table class="table table-sm table-borderless" >
-      <tbody>
-        <tr>
-          <td>
-            {{ course.course_number }}
-           </td>
-          {% if course.link%}
-          <td>
-            <a href="{{ course.link }}">{{ course.course_title }}</a>
-          {% else %}
-          <td>
-            {{ course.course_title }}
-          {% endif %}
-          {% if course.syllabus %}
-          (<a href="{{ course.syllabus }}">syllabus</a>)
-          {% endif %}
-          </td>
-          <td>
-            {{ course.when }}
-          </td>
-        </tr>
-
-    {% assign prev_institution = course.institution %}
-    {% assign prev_role = course.role %}
-
-  {% else %}
-    {% if (course.institution != prev_institution or course.role != prev_role) %}
+{% for course in courses_sorted %}
+  {% assign current_institution = course.institution %}
+  {% assign current_role = course.role %}
+  
+  {% comment %} Check for changes in institution or role to create new headings and tables {% endcomment %}
+  {% if is_first_item or (current_institution != prev_institution) or (current_role != prev_role) %}
+    
+    {% comment %} Close the previous table if it's not the first item {% endcomment %}
+    {% if is_first_item == false %}
       </tbody>
       </table>
-      {% if course.institution != prev_institution %}
-        <h3>{{ display_names[course.institution] | default: course.institution }}</h3>
-        <h4>{{ display_names[course.role] | default: course.role }}</h4>
-        <table class="table table-sm table-borderless">
-          <tbody>
-      {% else %}
-        {% comment %} so role must be different {% endcomment %}
-        <h4>{{ display_names[course.role] | default: course.role }}</h4>
-          <table class="table table-sm table-borderless">
-          <tbody>
-      {% endif %}
     {% endif %}
     
-    <tr>
-      <td>
-        {{ course.course_number }}
-       </td>
-      {% if course.link%}
-      <td>
+    {% comment %} Start new institution and/or role headings {% endcomment %}
+    {% if current_institution != prev_institution %}
+      <h3>{{ display_names[current_institution] | default: current_institution }}</h3>
+    {% endif %}
+    {% if (current_institution != prev_institution) or (current_role != prev_role) %}
+      <h4>{{ display_names[current_role] | default: current_role }}</h4>
+    {% endif %}
+
+    {% comment %} Start a new table for the current group {% endcomment %}
+    <table class="table table-sm table-borderless">
+      <tbody>
+  {% endif %}
+  
+  <tr>
+    <td>{{ course.course_number }}</td>
+    <td>
+      {% if course.link %}
         <a href="{{ course.link }}">{{ course.course_title }}</a>
       {% else %}
-      <td>
         {{ course.course_title }}
       {% endif %}
+      
       {% if course.syllabus %}
         {% if course.syllabus contains '://' %}
           (<a href="{{ course.syllabus }}">syllabus</a>)
@@ -68,18 +47,18 @@
           (<a href="{{ course.syllabus | prepend: '/assets/pdf/' | relative_url }}" target="_blank">syllabus</a>)
         {% endif %}
       {% endif %}
-      </td>
-      <td>
-        {{ course.when }}
-      </td>
-    </tr>
-    
-    {% assign prev_institution = course.institution %}
-    {% assign prev_role = course.role %}
-  {% endif %}
+    </td>
+    <td>{{ course.when }}</td>
+  </tr>
+  
+  {% assign prev_institution = current_institution %}
+  {% assign prev_role = current_role %}
+  {% assign is_first_item = false %}
+
 {% endfor %}
 
-{% if site.data.teaching.size > 0 %}
+{% comment %} Close the last table {% endcomment %}
+{% if courses_sorted.size > 0 %}
   </tbody>
 </table>
 {% endif %}

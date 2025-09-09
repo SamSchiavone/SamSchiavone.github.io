@@ -1,119 +1,134 @@
 - institution: MIT
   role: Instructor
   when: Spring 2025
+  sort_order: 2025.25
   course_title: Project Laboratory in Mathematics
-  course_number: "18.821"
+  course_number: '18.821'
   link: https://canvas.mit.edu/courses/30207
   syllabus: https://canvas.mit.edu/courses/30207/assignments/syllabus
 
 - institution: MIT
   role: Instructor
   when: Fall 2024
+  sort_order: 2024.75
   course_title: Linear Algebra
-  course_number: "18.700"
+  course_number: '18.700'
   link: https://math.mit.edu/~sschiavo/18-700/index.html
-  syllabus: https://math.mit.edu/~sschiavo/18-700/schedule.html 
+  syllabus: https://math.mit.edu/~sschiavo/18-700/schedule.html
 
 - institution: MIT
   role: Instructor
   when: Fall 2021
+  sort_order: 2021.75
   course_title: Introduction to Algebraic Geometry
-  course_number: "18.721"
+  course_number: '18.721'
   link: https://math.mit.edu/classes/18.721/Fall2021/index.html
   syllabus: https://math.mit.edu/classes/18.721/Fall2021/syllabus.html
 
 - institution: MIT
   role: Instructor
   when: Spring 2021
+  sort_order: 2021.25
   course_title: Reading course on Belyi maps and dessins d'enfants
-  course_number: "18.099"
+  course_number: '18.099'
   link: https://math.mit.edu/~sschiavo/Courses/Belyi-Sp21/index.php
-  syllabus:
+  syllabus: null
 
 - institution: Dartmouth
   role: Instructor
   when: Spring 2019
+  sort_order: 2019.25
   course_title: Calculus of Functions of One and Several Variables
-  course_number: "Math 8"
+  course_number: Math 8
   link: https://math.dartmouth.edu/archive/m8s19/public_html/
   syllabus: https://math.dartmouth.edu/archive/m8s19/public_html/general_info.php
 
 - institution: Dartmouth
   role: Instructor
   when: Fall 2017
+  sort_order: 2017.75
   course_title: Linear Algebra with Applications
-  course_number: "Math 22"
+  course_number: Math 22
   link: https://math.dartmouth.edu/archive/m22f17/public_html/
   syllabus: https://math.dartmouth.edu/archive/m22f17/public_html/general_info.php
 
 - institution: Dartmouth
   role: Instructor
   when: Fall 2016
+  sort_order: 2016.75
   course_title: Differential Equations
-  course_number: "Math 23"
+  course_number: Math 23
   link: https://math.dartmouth.edu/archive/m23f16/public_html/
   syllabus: https://math.dartmouth.edu/archive/m23f16/public_html/general_info.php
 
 - institution: Dartmouth
   role: TA
   when: Spring 2016
+  sort_order: 2016.25
   course_title: Calculus of Functions of One and Several Variables
-  course_number: "Math 8"
-  link: https://math.dartmouth.edu/archive/m8s16/public_html/ 
+  course_number: Math 8
+  link: https://math.dartmouth.edu/archive/m8s16/public_html/
   syllabus: https://math.dartmouth.edu/archive/m8s16/public_html/general.phtml
 
 - institution: Dartmouth
-  role: TA 
+  role: TA
   when: Summer 2015
+  sort_order: 2015.5
   course_title: Linear Algebra with Applications
-  course_number: "Math 22"
-  link:
-  syllabus:
+  course_number: Math 22
+  link: null
+  syllabus: null
 
 - institution: Dartmouth
   role: TA
   when: Winter 2015
+  sort_order: 2015.0
   course_title: Introduction to Calculus
-  course_number: "Math 3"
+  course_number: Math 3
   link: https://math.dartmouth.edu/archive/m3w15/public_html/
   syllabus: https://math.dartmouth.edu/archive/m3w15/public_html/index.html
 
 - institution: Dartmouth
   role: TA
   when: Fall 2014
+  sort_order: 2014.75
   course_title: Multivariable Calculus for Two-Term AP First-Year Students
-  course_number: "Math 11"
+  course_number: Math 11
   link: https://math.dartmouth.edu/archive/m11f14/public_html/
   syllabus: https://math.dartmouth.edu/archive/m11f14/public_html/index.phtml
 
-- institution: UVM 
+- institution: UVM
   role: Instructor
-  when: Fall 2012, Summer 2013, Fall 2013 
+  when: Fall 2012, Summer 2013, Fall 2013
+  sort_order: 2013.75
   course_title: Fundamentals of Calculus I
-  course_number: "Math 19"
-  link:
+  course_number: Math 19
+  link: null
   syllabus: Math19SyllFall2013.pdf
 
-- institution: UVM 
+- institution: UVM
   role: Instructor
   when: Spring 2012
+  sort_order: 2012.25
   course_title: Applications of Finite Math
-  course_number: "Math 17"
-  link:
+  course_number: Math 17
+  link: null
   syllabus: Math17SyllSpr2012.pdf
 
 - institution: Amherst
   role: TA
   when: Spring 2010
+  sort_order: 2010.25
   course_title: Calculus with Elementary Functions
-  course_number: "Math 6"
-  link:
-  syllabus:
+  course_number: Math 6
+  link: null
+  syllabus: null
 
 - institution: Amherst
   role: TA
   when: Fall 2009
+  sort_order: 2009.75
   course_title: Calculus With Algebra
-  course_number: "Math 5"
-  link:
-  syllabus:
+  course_number: Math 5
+  link: null
+  syllabus: null
