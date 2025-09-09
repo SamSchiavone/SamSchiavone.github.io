@@ -1,0 +1,197 @@
+\documentclass[reqno, 12pt]{amsart}
+
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amsxtra}
+\usepackage{mathrsfs}
+\usepackage{comment}
+\usepackage{graphicx}
+\usepackage{placeins}
+\usepackage{multicol}
+\usepackage{bbm}
+\usepackage{stmaryrd}
+%\usepackage{enumerate}
+\usepackage[inline, shortlabels]{enumitem}
+\usepackage{mathdots}
+\usepackage{colonequals}
+\usepackage{hyperref}
+
+
+\usepackage{calc}
+\usepackage{tikz}
+\usetikzlibrary{arrows,calc,automata,shadows,backgrounds,positioning,intersections,fadings,decorations.pathreplacing,shapes,matrix}
+\usepackage{tikz-cd}
+
+\usepackage{fullpage}
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{prop}[thm]{Proposition}
+\theoremstyle{definition}  
+\newtheorem{defn} [thm] {Definition} 
+\newtheorem{claim}[thm]{Claim}
+\newtheorem{example} [thm] {Example}
+\newtheorem{rem} [thm] {Remark}
+
+\newenvironment{problab}[1]
+{\noindent\textbf{Problem #1}.}
+{\vskip 6pt}
+
+\newenvironment{exolab}[1]
+{\noindent\textbf{Exercise #1}.}
+{\vskip 6pt}
+
+\theoremstyle{remark}
+\newtheorem*{soln}{Solution}
+
+\newcommand{\C}{\mathbb C}
+\renewcommand{\H}{\mathbb H}
+\newcommand{\D}{\mathbb D}
+\newcommand{\F}{\mathbb F}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\T}{\mathbb T}
+\renewcommand{\P}{\mathbb P}
+\renewcommand{\O}{\mathcal O}
+\newcommand{\m}{\mathfrak m}
+\newcommand{\A}{\mathbb A}
+\renewcommand{\SS}{\mathbb S}
+
+\newcommand{\B}{\mathcal B}
+\newcommand{\E}{\mathcal E}
+
+\newcommand{\SSpan}{\text{span}}
+
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\img}{img}
+\DeclareMathOperator{\Ann}{Ann}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\ad}{ad}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\rank}{rank}
+
+\DeclareMathOperator{\id}{id}
+
+\usepackage{mathpazo}
+
+\everymath{\displaystyle}
+
+\tikzset{commutative diagrams/.cd, arrow style = tikz, diagrams = {>=latex}}
+
+\newenvironment{amatrix}[1]{%
+  \left(\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+  \end{array}\right)
+}
+
+\usepackage{abstract}
+\renewcommand{\abstractname}{}    % clear the title
+\renewcommand{\absnamepos}{empty} % originally center
+%\setlength{\abstitleskip}
+
+\begin{document}
+%\renewcommand{\abstractname}{\vspace{-\baselineskip}}
+
+\title{18.700 Problem Set 1}
+%\author{Évariste Galois}
+\dedicatory{Due Thursday, September 12 at 11:59 pm on \href{https://canvas.mit.edu/courses/27315}{Canvas}}
+%\thanks{}
+%\contrib{}
+%\address{}
+
+\maketitle
+
+\begin{abstract}
+  \noindent Collaborated with:\\
+  Sources used: 
+\end{abstract}
+\vskip 0.5cm
+
+\begin{problab}{1} (3 points)
+  Do the planes $x_1 + 2 x_2 + x_3 = 4$, $x_2 - x_3 = 1$ and $x_1 + 3 x_2 = 0$ have at least one common point of intersection?
+\end{problab}
+
+\begin{problab}{2} (3 points)
+  Give an example of a $3 \times 3$ matrix $A$ with real entries whose reduced row echelon form is
+  \begin{equation*}
+    \begin{pmatrix}
+      1 & 0 & 1/2\\
+      0 & 1 & 1/3\\
+      0 & 0 & 0
+    \end{pmatrix} \, ,
+  \end{equation*}
+and such that every entry of $A$ is a nonzero integer.
+\end{problab}
+
+\begin{problab}{3} (5 points)
+  Fix $a,b,c,d \in \F$ and consider the matrix
+  \begin{equation*}
+    A \colonequals
+    \begin{pmatrix}
+      a & b & 1 & 0\\
+      c & d & 0 & 1
+    \end{pmatrix} \, .
+  \end{equation*}
+  Assuming $a \neq 0$ and $c \neq 0$, compute the reduced row echelon form of $A$. (\textit{Hint}: You will have to deal with two cases, depending on whether some quantity is zero or not.)
+\end{problab}
+
+\begin{problab}{4} (4 points)
+  For each of the following augmented matrices, determine the value(s) of $h$ such that corresponding linear system is consistent.
+  \begin{enumerate}[(a)]
+    \item 
+      \begin{equation*}
+        \begin{amatrix}{2}
+          1 & h & -3\\
+          -2 & 4 & 6
+        \end{amatrix}
+      \end{equation*}
+     \item 
+      \begin{equation*}
+        \begin{amatrix}{2}
+          1 & 3 & -2\\
+          -4 & h & 8
+        \end{amatrix}
+     \end{equation*}
+  \end{enumerate}
+\end{problab}
+
+\begin{problab}{5} (3 points)
+  Let
+  \begin{equation*}
+    S \colonequals
+    \left\{
+      \begin{pmatrix} 1\\ -2\\ 1\end{pmatrix} t +
+      \begin{pmatrix} 2\\ 3\\ 0\end{pmatrix} : t \in \F
+    \right\} \, .
+  \end{equation*}
+  Give a linear system whose solution set is $S$.
+\end{problab}
+
+\begin{problab}{6} (6 points)
+  \begin{enumerate}[(a)]
+    \item
+      Suppose that $p(t) = a_0 + a_1 t + a_2 t^2$ is a quadratic polynomial with $a_0, a_1, a_2 \in \F$, whose graph passes through the points $(1,12), (2,15)$, and $(3,16)$. Find the coefficients $a_0, a_1, a_2$ by solving the following linear system.
+      \begin{equation*}
+        \begin{array}{cccc}
+          a_0 & + a_1(1) & + a_2(1)^2 &= 12\\
+          a_0 & + a_1(2) & + a_2(2)^2 &= 15\\
+          a_0 & + a_1(3) & + a_2(3)^2 &= 16\\
+        \end{array}
+      \end{equation*}
+    \item
+      Suppose that $p(t) = a_0 + a_1 t + \cdots + a_n t^n$ is a polynomial of degree $n$ with $a_0, a_1, \ldots, a_n \in \F$, whose graph passes through the points $(u_1, v_1), (u_2, v_2), \ldots, (u_{n+1}, v_{n+1})$. Determine a linear system that the coefficients $a_0, a_1, \ldots, a_n$ must satisfy, and write down its corresponding augmented matrix.
+  \end{enumerate}
+\end{problab}
+
+\end{document} 	

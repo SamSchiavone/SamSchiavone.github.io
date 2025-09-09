@@ -1,0 +1,100 @@
+\documentclass[12pt]{amsart}
+
+
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amsxtra}
+\usepackage{mathrsfs}
+\usepackage{enumerate}
+
+\setlength{\hfuzz}{4pt}
+
+\newenvironment{problab}[1]
+{\noindent\textbf{Problem #1}.}
+{\vskip 6pt}
+
+\newenvironment{exolab}[1]
+{\noindent\textbf{Exercise #1}.}
+{\vskip 6pt}
+
+
+\theoremstyle{remark}
+\newtheorem*{soln}{Solution}
+
+\newcommand{\C}{\mathbb C}
+\newcommand{\D}{\mathfrak D}
+\renewcommand{\H}{\mathfrak H}
+\newcommand{\F}{\mathbb F}
+\renewcommand{\P}{\mathbb P}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\renewcommand{\SS}{\mathbb S}
+\newcommand{\Z}{\mathbb Z}
+
+\renewcommand{\Im}{\operatorname{Im}}
+\renewcommand{\Re}{\operatorname{Re}}
+
+\newcommand{\eps}{\epsilon}
+
+\usepackage{fullpage}
+
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\impart}{Im}
+\DeclareMathOperator{\repart}{Re}
+
+\usepackage{mathpazo}
+
+\begin{document}
+
+\title{Belyi Maps and Dessins d'Enfants \\ Homework \#2}
+\date{\today}
+
+%\thanks{\emph{Date:} Monday, 11 February 2013}
+
+\maketitle
+
+\begin{exolab}{2.1}
+  Show that the map
+  \begin{align*}
+    f: \H &\to \D\\
+    z &\mapsto \frac{z-i}{z+i}
+  \end{align*}
+  is an isomorphism of Riemann surfaces. What is its inverse?
+\end{exolab}
+
+\begin{exolab}{2.2}
+  Show that the map
+  \begin{align*}
+    f: \P^1 &\to \SS^2\\
+    [z_0 : z_1] &\mapsto \frac{1}{|z_0|^2 + |z_1|^2} \left(2\Re(z_0 \overline{z_1}), 2 \Im(z_0 \overline{z_1}), |z_0|^2 - |z_1|^2 \right)
+  \end{align*}
+  is an isomorphism of Riemann surfaces.
+\end{exolab}
+
+\begin{exolab}{2.3}
+  For a given $n \in \Z_{\geq 1}$, show that the map
+  \begin{align*}
+    f: \P^1 &\to \P^1\\
+    [X:Y] &\mapsto [X^n : Y^n]
+  \end{align*}
+  is a morphism of Riemann surfaces.
+\end{exolab}
+
+\begin{exolab}{2.4}
+  Let $E$ be the elliptic curve given by $Y^2 Z = X^3 + Z^3$. Define the map
+  \begin{align*}
+    f: E &\to \P^1\\
+    [X:Y:Z] &\mapsto [X:Z] \, .
+  \end{align*}
+  \begin{enumerate}[(a)]
+    \item 
+      Note that this expression for $f$ does not work for the point $[0:1:0]$. How should $f([0:1:0])$ be defined in order to get a continuous map? (\textit{Hint:} Write down equations for $E$ and $f$ on the affine open set where $Y \neq 0$. Use this affine equation for $E$ to give a valid expression for $f$ on this neighborhood.)
+    \item
+      Using your extended definition of $f$ from the previous part, show that $f$ is a morphism of Riemann surfaces.
+  \end{enumerate}
+\end{exolab}
+
+\end{document}

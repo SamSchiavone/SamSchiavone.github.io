@@ -1,0 +1,176 @@
+\documentclass[reqno, 12pt]{amsart}
+
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amsxtra}
+\usepackage{mathrsfs}
+\usepackage{comment}
+\usepackage{graphicx}
+\usepackage{placeins}
+\usepackage{multicol}
+\usepackage{bbm}
+\usepackage{stmaryrd}
+%\usepackage{enumerate}
+\usepackage[inline, shortlabels]{enumitem}
+\usepackage{mathdots}
+\usepackage{colonequals}
+\usepackage{hyperref}
+
+
+\usepackage{calc}
+\usepackage{tikz}
+\usetikzlibrary{arrows,calc,automata,shadows,backgrounds,positioning,intersections,fadings,decorations.pathreplacing,shapes,matrix}
+\usepackage{tikz-cd}
+
+\usepackage{fullpage}
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{prop}[thm]{Proposition}
+\theoremstyle{definition}  
+\newtheorem{defn} [thm] {Definition} 
+\newtheorem{claim}[thm]{Claim}
+\newtheorem{example} [thm] {Example}
+\newtheorem{rem} [thm] {Remark}
+
+\newenvironment{problab}[1]
+{\noindent\textbf{Problem #1}.}
+{\vskip 6pt}
+
+\newenvironment{exolab}[1]
+{\noindent\textbf{Exercise #1}.}
+{\vskip 6pt}
+
+\theoremstyle{remark}
+\newtheorem*{soln}{Solution}
+
+\newcommand{\C}{\mathbb C}
+\renewcommand{\H}{\mathbb H}
+\newcommand{\D}{\mathbb D}
+\newcommand{\F}{\mathbb F}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\T}{\mathbb T}
+\renewcommand{\P}{\mathcal P}
+\renewcommand{\O}{\mathcal O}
+\newcommand{\m}{\mathfrak m}
+\newcommand{\A}{\mathbb A}
+\renewcommand{\SS}{\mathbb S}
+\renewcommand{\L}{\mathcal L}
+
+\newcommand{\B}{\mathcal B}
+\newcommand{\E}{\mathcal E}
+
+\newcommand{\SSpan}{\text{span}}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\img}{img}
+\DeclareMathOperator{\Ann}{Ann}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\ad}{ad}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\minpoly}{minpoly}
+
+\DeclareMathOperator{\id}{id}
+
+\usepackage{mathpazo}
+
+\everymath{\displaystyle}
+
+\tikzset{commutative diagrams/.cd, arrow style = tikz, diagrams = {>=latex}}
+
+\newenvironment{amatrix}[1]{%
+  \left(\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+  \end{array}\right)
+}
+
+\usepackage{abstract}
+\renewcommand{\abstractname}{}    % clear the title
+\renewcommand{\absnamepos}{empty} % originally center
+%\setlength{\abstitleskip}
+
+\begin{document}
+%\renewcommand{\abstractname}{\vspace{-\baselineskip}}
+
+\title{18.700 Problem Set 7}
+%\author{Évariste Galois}
+\dedicatory{Due Wednesday, November 6 at 11:59 pm on \href{https://canvas.mit.edu/courses/27315}{Canvas}}
+%\thanks{}
+%\contrib{}
+%\address{}
+
+\maketitle
+
+\begin{abstract}
+  \noindent Collaborated with:\\
+  Sources used: 
+\end{abstract}
+\vskip 0.5cm
+
+Let $V$ be an inner product space.
+
+\begin{problab}{1} (6A \#9, 11) (10 points)
+  \begin{enumerate}[(a)]
+    \item 
+      Suppose $u,v \in V$, and $\|u\| = 1 = \|v\|$ and $\la u, v \ra = 1$. Prove that $u = v$.
+    \item
+      Find vectors $u,v \in \R^2$ such that $u$ is a scalar multiple of $(1,3)$, $v$ is orthogonal to $(1,3)$, and $(1,2) = u+v$.
+  \end{enumerate}
+\end{problab}
+
+%\begin{soln}
+%\end{soln}
+
+
+\begin{problab}{2} (6A \#16) (5 points)
+  Given $x,y \in V$, we defined the angle between $x$ and $y$ to be
+  \begin{equation*}
+    \angle(x,y) \colonequals \arccos\left( \frac{\la x, y \ra}{\|x\| \|y\|} \right) \, .
+  \end{equation*}
+  Explain why this definition makes sense using the Cauchy-Schwarz inequality.
+\end{problab}
+
+\begin{problab}{3} (6B \#1) (6 points)
+  Suppose $e_1, \ldots, e_m$ is a list of vectors in $V$ such that
+  \begin{equation*}
+    \|a_1 e_1 + \cdots + a_m e_m\|^2 = |a_1|^2 + \cdots + |a_m|^2
+  \end{equation*}
+  for all $a_1, \ldots, a_m \in \F$. Show that $e_1, \ldots, e_m$ is an orthonormal list. (This exercise provides a converse to 6.24 in the textbook.)
+\end{problab}
+
+\begin{problab}{4} (6B \#7) (6 points)
+  Suppose $T \in \L(\R^3)$ has an upper-triangular matrix with respect to the basis $(1,0,0), (1,1,1), (1,1,2)$. Find an orthonormal basis of $\R^3$ with respect to which $T$ has an upper-triangular matrix.
+\end{problab}
+
+\begin{problab}{5} (6C \#3) (8 points)
+  Suppose $U$ is the subspace of $\R^4$ defined by
+  \begin{equation*}
+    U \colonequals \SSpan\left( (1,2,3,-4), (-5,4,3,2) \right) \, .
+  \end{equation*}
+  Find an orthonormal basis of $U$ and an orthonormal basis of $U^\perp$.
+\end{problab}
+
+\begin{problab}{6} (6C \#4) (10 points)
+  Suppose $e_1, \ldots, e_n$ is a list of vectors in $V$ with $\|e_k\| = 1$ for each $k = 1, \ldots, n$, and
+  \begin{equation*}
+    \|v\|^2 = |\la v, e_1 \ra|^2 + \cdots + |\la v, e_n \ra|^2
+  \end{equation*}
+  for all $v \in V$. Prove that $e_1, \ldots, e_n$ is an orthonormal basis of $V$. (This provides a converse to 6.30(b) in the textbook.)
+\end{problab}
+
+\end{document} 	

@@ -1,0 +1,110 @@
+\documentclass[12pt]{amsart}
+
+
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amsxtra}
+\usepackage{mathrsfs}
+\usepackage{enumerate}
+\usepackage{colonequals}
+
+\setlength{\hfuzz}{4pt}
+
+\newenvironment{problab}[1]
+{\noindent\textbf{Problem #1}.}
+{\vskip 6pt}
+
+\newenvironment{exolab}[1]
+{\noindent\textbf{Exercise #1}.}
+{\vskip 6pt}
+
+
+\theoremstyle{remark}
+\newtheorem*{soln}{Solution}
+
+\newcommand{\C}{\mathbb C}
+\newcommand{\D}{\mathfrak D}
+\renewcommand{\H}{\mathfrak H}
+\newcommand{\F}{\mathbb F}
+\renewcommand{\P}{\mathbb P}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\renewcommand{\SS}{\mathbb S}
+\newcommand{\Z}{\mathbb Z}
+
+\renewcommand{\Im}{\operatorname{Im}}
+\renewcommand{\Re}{\operatorname{Re}}
+
+\newcommand{\eps}{\epsilon}
+
+\usepackage{fullpage}
+
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\ord}{ord}
+
+\usepackage{mathpazo}
+
+\begin{document}
+
+\title{Belyi Maps and Dessins d'Enfants \\ Homework \#3}
+\date{\today}
+
+%\thanks{\emph{Date:} Monday, 11 February 2013}
+
+\maketitle
+
+\begin{exolab}{3.1}
+  Let $C: X^3 + Y^3 = Z^3$ and define
+  \begin{align*}
+    f: C &\to \P^1\\
+    [X:Y:Z] &\mapsto [X:Z] \, .
+  \end{align*}
+  Determine the ramification points of $f$ and their multiplicities.
+\end{exolab}
+
+\begin{exolab}{3.2}
+  \begin{enumerate}[(a)]
+    \item 
+      Let $f \in \mathcal{M}(X)$ be a nonconstant meromorphic function on a compact Riemann surface $X$. Show that $\sum_P \ord_P(f) = 0$. (\textit{Hint}: Use results about degree.)
+    \item
+      Given $0 \neq x \in \Z$ and a prime $p \in \Z$, define the \textsf{$p$-adic valuation}
+      \begin{equation*}
+        \ord_p(x) \colonequals \max\{v \in \Z : p^v \mid x\}
+      \end{equation*}
+      and extend the definition to $x = a/b \in \Q$ by
+      \begin{equation*}
+        \ord_p(x) = \ord_p(a/b) \colonequals \ord_p(a) - \ord_p(b) \, .
+      \end{equation*}
+      By convention, we define $\ord_p(0) = \infty$. Define the \textsf{$p$-adic absolute value} by
+      \begin{equation*}
+        |x|_p = p^{-\ord_p(x)}
+      \end{equation*}
+      for $x \in \Q$. Finally, define $|x|_\infty = |x|$, the usual absolute value. Show that
+      \begin{equation*}
+        \prod_{p \leq \infty} |x|_p = 1
+      \end{equation*}
+      where the product ranges over all primes $p \in \Z$ as well as $p = \infty$.
+  \end{enumerate}
+\end{exolab}
+
+
+\begin{exolab}{3.3}
+  Let $C$ be a hyperelliptic curve given by the Weierstrass equation
+  \begin{equation*}
+    Y^2 = f(X,Z) = \prod_{i=1}^{2g+2} (X - \alpha_i Z)
+  \end{equation*}
+  in $\PP(1,g+1,1)$, where the $\alpha_i \in \C$ are distinct.
+  \begin{enumerate}[(a)]
+    \item 
+      Let $U_0$ and $U_2$ be the affine open subsets where $X \neq 0$ and $Z \neq 0$, respectively. Write $C \cap U_0$ and $C \cap U_2$ as affine curves given by (affine) Weierstrass equations.
+    \item
+      Determine the relationship between your local affine coordinates on $U_0$ and $U_2$. E.g., if $x,y$ are affine coordinates on $U_0$ and $z,w$ are affine coordinates on $U_2$, express $z$ and $w$ as rational functions in $x$ and $y$, valid on $U_0 \cap U_2$.
+    \item
+      Compare our definition of a hyperelliptic curve with the one given in Miranda on p. 60. Do you see how they are equivalent?
+  \end{enumerate}
+\end{exolab}
+
+\end{document}

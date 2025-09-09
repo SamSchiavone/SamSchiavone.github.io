@@ -1,0 +1,98 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amsxtra}
+\usepackage{mathrsfs}
+\usepackage{enumerate}
+\usepackage{colonequals}
+\usepackage{graphicx}
+
+\setlength{\hfuzz}{4pt}
+
+\newenvironment{problab}[1]
+{\noindent\textbf{Problem #1}.}
+{\vskip 6pt}
+
+\newenvironment{exolab}[1]
+{\noindent\textbf{Exercise #1}.}
+{\vskip 6pt}
+
+
+\theoremstyle{remark}
+\newtheorem*{soln}{Solution}
+
+\newcommand{\C}{\mathbb C}
+\newcommand{\D}{\mathfrak D}
+\renewcommand{\H}{\mathfrak H}
+\newcommand{\F}{\mathbb F}
+\renewcommand{\P}{\mathbb P}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\renewcommand{\SS}{\mathbb S}
+\newcommand{\Z}{\mathbb Z}
+
+\newcommand{\wh}{\widehat}
+
+\renewcommand{\Im}{\operatorname{Im}}
+\renewcommand{\Re}{\operatorname{Re}}
+
+\newcommand{\eps}{\epsilon}
+
+\usepackage{fullpage}
+
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\Stab}{Stab}
+
+\usepackage{mathpazo}
+
+\begin{document}
+
+\title{Belyi Maps and Dessins d'Enfants \\ Homework \#6}
+\date{\today}
+
+%\thanks{\emph{Date:} Monday, 11 February 2013}
+
+\maketitle
+
+\begin{exolab}{6.1}
+  Let $T$ be a hyperbolic triangle with one vertex at infinity, and the other two vertices on the unit circle. Denote the angles of $T$ at these latter two vertices by $\alpha$ and $\beta$, as shown below. Compute the hyperbolic area of $T$. (Recall that the hyperbolic area is given by
+  \begin{equation*}
+    a(T) = \int_T \frac{dx dy}{y^2} \, .
+  \end{equation*}
+  Use polar coordinates to compute this integral.)
+  \vskip 5pt
+  \begin{center}
+    \includegraphics[width=0.6\linewidth]{triangle-infinity.png}
+  \end{center}
+\end{exolab}
+
+\begin{exolab}{6.2}
+  Let $G$ be a transitive permutation group on a finite set $A$. Recall the following definitions.
+  \begin{itemize}
+    \item 
+      A \textsf{block} of $G$ is a nonempty subset $B$ of $A$ such that for all $\sigma \in G$, either $\sigma(B) = B$ or $\sigma(B) \cap B = \varnothing$, where $\sigma(B) = \{\sigma(b) : b \in B\}$.
+    \item
+      $G$ is \textsf{primitive} if the only blocks of $G$ are are the trivial ones: the sets of size $1$, and $A$ itself.
+  \end{itemize}
+
+  \begin{enumerate}[(a)]
+    \item 
+      If $B$ is a block and $a \in B$, show that the set
+      \begin{equation*}
+        \Stab_G(B) = \{\sigma \in G \mid \sigma(B) = B\}
+      \end{equation*}
+      is a subgroup of $G$ containing $\Stab_G(a)$.
+    \item
+      If $B$ is a block and $\sigma_1(B), \sigma_2(B), \ldots, \sigma_n(B)$ are the distinct images of $B$ under elements of $G$, show that these form a partition of $A$.
+    \item
+      Prove that $G$ is primitive if and only if for each $a \in A$, the only subgroups of $G$ containing $\Stab_G(a)$ are $\Stab_G(a)$ and $G$ itself, i.e., $\Stab_G(a)$ is a \emph{maximal} subgroup of $G$.
+  \end{enumerate}
+
+\end{exolab}
+
+\end{document}
