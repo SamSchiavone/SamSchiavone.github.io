@@ -5,7 +5,8 @@ repo_description_lines_max: 2
 
 github_repos:
   #- alshedivat/al-folio
-  #- SamSchiavone/Mumford-type # currently private
+  - SamSchiavone/Mumford-type # currently private
+  - Erdos-Projects/fall-2025-developmental-norms-and-language-acquisition 
   - SamSchiavone/17T7
   - SamSchiavone/Gm-Reduce
   - LMFDB/lmfdb
