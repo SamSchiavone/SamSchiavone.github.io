@@ -30,7 +30,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a researcher, programmer, and mathematician who combines mathematical abstraction with computational tools in order to discover, analyze, and elucidate. My expertise lies in translating theoretical concepts into practical solutions.
+I am a Ph.D. mathematician, researcher, and programmer who combines mathematical abstraction with computational tools in order to discover, analyze, and elucidate. My expertise lies in translating theoretical concepts into practical solutions.
 
 Previously I was a research scientist in the <a href="https://math.mit.edu/">mathematics department at MIT</a>, supervised by <a href="https://math.mit.edu/~poonen/">Bjorn Poonen</a> and <a href="https://math.mit.edu/~drew/">Drew Sutherland</a>, as part of the <a href="https://simonscollab.icerm.brown.edu/">Simons Collaboration on Arithmetic Geometry, Number Theory, and Computation</a>. I received my Ph.D. in mathematics from <a href="https://math.dartmouth.edu/">Dartmouth College</a> in 2019 under the supervision of <a href="https://jvoight.github.io/">John Voight</a>.
 
