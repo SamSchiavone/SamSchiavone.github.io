@@ -121,7 +121,7 @@
   sort_order: 2010.25
   course_title: Calculus with Elementary Functions
   course_number: Math 6
-  link: null
+  link: https://www.amherst.edu/academiclife/departments/courses/0910S/MATH/MATH-06-0910S
   syllabus: null
 
 - institution: Amherst
@@ -130,5 +130,5 @@
   sort_order: 2009.75
   course_title: Calculus With Algebra
   course_number: Math 5
-  link: null
+  link: https://www.amherst.edu/academiclife/departments/courses/0910F/MATH/MATH-05-0910F
   syllabus: null
