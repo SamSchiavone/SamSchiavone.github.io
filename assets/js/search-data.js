@@ -9,7 +9,21 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-publications",
+  },{id: "dropdown-short-resume",
+              title: "Short resume",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/assets/pdf/Schiavone-CV-Industry.pdf";
+              },
+            },{id: "dropdown-long-cv",
+              title: "Long CV",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/assets/pdf/Schiavone-CV-Industry-long.pdf";
+              },
+            },{id: "nav-publications",
           title: "publications",
           description: "",
           section: "Navigation",
