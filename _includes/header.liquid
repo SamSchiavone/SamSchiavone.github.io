@@ -57,9 +57,11 @@
           </li>
 
           <!-- CV, static PDF -->
+          <!--
           <li class="nav-item">
             <a class="nav-link" href="{{ site.baseurl }}/assets/pdf/Schiavone-CV-Industry.pdf" target="_blank">cv</a>
           </li>
+          -->
 
           <!-- Other pages -->
           {% assign sorted_pages = site.pages | sort: 'nav_order' %}
@@ -92,10 +94,16 @@
                       {% if child.title == 'divider' %}
                         <div class="dropdown-divider"></div>
                       {% else %}
-                        <a
-                          class="dropdown-item {% if page.title == child.title %}active{% endif %}"
-                          href="{% if child.permalink contains '://' %}{{ child.permalink }}{% else %}{{ child.permalink | relative_url }}{% endif %}"
-                        >
+                        {%- assign target_attr = '' -%}
+                          {%- if child.target == '_blank' -%}
+                              {%- assign target_attr = ' target="_blank" rel="noopener noreferrer"' -%}
+                          {%- endif -%}
+
+                          <a
+                            class="dropdown-item {% if page.title == child.title %}active{% endif %}"
+                            href="{% if child.permalink contains '://' %}{{ child.permalink }}{% else %}{{ child.permalink | relative_url }}{% endif %}"
+                            {{ target_attr }}
+                          >
                           {{- child.title -}}
                         </a>
                       {% endif %}
