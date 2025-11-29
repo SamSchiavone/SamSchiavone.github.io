@@ -50,6 +50,10 @@ orcid_id: 0000-0003-2307-4291 # your ORCID ID
 # x_username: # your X handle
 # youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 # zotero_username: # your zotero username
+arxiv: # can be any name here other than the ones already defined above
+  logo: /assets/img/arXiv-small.png
+  title: arXiv 
+  url: https://arxiv.org/a/schiavone_s_1.html
 # custom_social: # can be any name here other than the ones already defined above
   # logo: https://www.alberteinstein.com/wp-content/uploads/2024/03/cropped-favicon-192x192.png # can be png, svg, jpg
   # title: Custom Social
