@@ -160,6 +160,13 @@ ninja.data = [{
           window.open("https://orcid.org/0000-0003-2307-4291", "_blank");
         },
       },{
+        id: 'social-arxiv',
+        title: 'Arxiv',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://arxiv.org/a/schiavone_s_1.html", "_blank");
+        },
+      },{
       id: 'light-theme',
       title: 'Change theme to light',
       description: 'Change the theme of the site to Light',
