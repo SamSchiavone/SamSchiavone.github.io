@@ -19,8 +19,8 @@ body {
 #navigation {
         height: 25px;
         width:800px;
-	margin: 30px auto 30px auto;
-#        border:#777777 2px solid;  /* debuging */
+        margin: 30px auto 30px auto;
+        /*border:#777777 2px solid; */ /* debuging */
 }
 
 #navigation table {
@@ -35,7 +35,7 @@ border-collapse: collapse;
 width: 100px;
 text-align: center;
 font-weight: bold;
-#border:#000000 2px solid;
+/*border:#000000 2px solid;*/
 }
 
 #navigation table th {
@@ -43,7 +43,7 @@ color: #453c3b;
 width: 100px;
 text-align: center;
 font-weight: bold;
-#border:#000000 2px solid;
+/*border:#000000 2px solid;*/
 }
 
 #navigation hr {
@@ -61,7 +61,7 @@ font-weight: bold;
 	font-size: 36px;
 	font-weight: bold;
 	text-align: center;
-	#margin: T, R, B, L;
+	/*margin: T, R, B, L;*/
 	margin: 15px auto 0 auto;        
 }
 
@@ -111,7 +111,7 @@ font-size: 15px;
 width: 400px;
 margin-bottom: 50px;
 border-collapse: collapse;
-#border:#00f 2px solid; /* debugging */
+/*border:#00f 2px solid;*/ /* debugging */
 }
 
 #main #left table th {
@@ -127,15 +127,7 @@ text-align: left;
 
 #main #course table {
   border-collapse: collapse;
-  "padding: 0px; "
-  "border: 1px solid black;"
 }
-
-"#course table th td {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-"
 
 #footer
 {
