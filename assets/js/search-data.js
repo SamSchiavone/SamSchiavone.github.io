@@ -14,7 +14,7 @@ ninja.data = [{
               description: "",
               section: "Dropdown",
               handler: () => {
-                window.location.href = "/assets/pdf/Schiavone-CV-Industry.pdf";
+                window.location.href = "/assets/pdf/Schiavone-CV-Industry-Word.pdf";
               },
             },{id: "dropdown-long-cv",
               title: "Long CV",
