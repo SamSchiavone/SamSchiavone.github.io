@@ -6,7 +6,7 @@ nav_order: 1
 dropdown: true
 children:
   - title: Short resume
-    permalink: /assets/pdf/Schiavone-CV-Industry.pdf 
+    permalink: /assets/pdf/Schiavone-CV-Industry-Word.pdf 
     target: _blank
     rel: external
 
