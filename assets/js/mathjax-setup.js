@@ -9,7 +9,7 @@ window.MathJax = {
       ["$$", "$$"],
       ["\\[", "\\]"],
     ],
-    packages: {'[+]': ['ams', 'color', 'html']},
+    packages: { "[+]": ["ams", "color", "html"] },
   },
   options: {
     renderActions: {
@@ -29,6 +29,6 @@ window.MathJax = {
     },
   },
   loader: {
-    load: ['[tex]/ams']
-  }
+    load: ["[tex]/ams"],
+  },
 };

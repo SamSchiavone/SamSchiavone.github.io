@@ -4,11 +4,11 @@
 
 "bommel":
   - firstname: ["Raymond", "R."]
-    url: https://raymondvanbommel.nl/ 
+    url: https://raymondvanbommel.nl/
 
 "costa":
   - firstname: ["Edgar", "E."]
-    url: https://edgarcosta.org/ 
+    url: https://edgarcosta.org/
 
 "elkies":
   - firstname: ["Noam", "Noam D.", "N.", "N. D."]
@@ -24,7 +24,7 @@
 
 "combes":
   - firstname: ["Lewis", "L."]
-    url: https://lewismcombes.github.io/  
+    url: https://lewismcombes.github.io/
 
 "paulhus":
   - firstname: ["Jen", "J.", "Jennifer"]

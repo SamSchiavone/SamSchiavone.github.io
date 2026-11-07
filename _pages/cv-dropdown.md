@@ -6,14 +6,14 @@ nav_order: 1
 dropdown: true
 children:
   - title: Short resume
-    permalink: /assets/pdf/Schiavone-CV-Industry-Word.pdf 
+    permalink: /assets/pdf/Schiavone-CV-Industry-Word.pdf
     target: _blank
     rel: external
 
   - title: divider
 
   - title: Long CV
-    permalink: /assets/pdf/Schiavone-CV-Industry-long.pdf 
-    target: _blank 
+    permalink: /assets/pdf/Schiavone-CV-Industry-long.pdf
+    target: _blank
     rel: external
 ---

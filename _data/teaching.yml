@@ -3,7 +3,7 @@
   when: Spring 2025
   sort_order: 2025.25
   course_title: Project Laboratory in Mathematics
-  course_number: '18.821'
+  course_number: "18.821"
   link: https://canvas.mit.edu/courses/30207
   syllabus: https://canvas.mit.edu/courses/30207/assignments/syllabus
 
@@ -12,7 +12,7 @@
   when: Fall 2024
   sort_order: 2024.75
   course_title: Linear Algebra
-  course_number: '18.700'
+  course_number: "18.700"
   link: /courses/18-700/
   syllabus: https://math.mit.edu/~sschiavo/18-700/schedule.html
 
@@ -21,7 +21,7 @@
   when: Fall 2021
   sort_order: 2021.75
   course_title: Introduction to Algebraic Geometry
-  course_number: '18.721'
+  course_number: "18.721"
   link: https://math.mit.edu/classes/18.721/Fall2021/index.html
   syllabus: https://math.mit.edu/classes/18.721/Fall2021/syllabus.html
 
@@ -30,7 +30,7 @@
   when: Spring 2021
   sort_order: 2021.25
   course_title: Reading course on Belyi maps and dessins d'enfants
-  course_number: '18.099'
+  course_number: "18.099"
   link: /courses/Belyi-Sp21/
   syllabus: null
 

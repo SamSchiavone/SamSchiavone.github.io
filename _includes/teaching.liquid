@@ -8,16 +8,15 @@
 {% for course in courses_sorted %}
   {% assign current_institution = course.institution %}
   {% assign current_role = course.role %}
-  
+
   {% comment %} Check for changes in institution or role to create new headings and tables {% endcomment %}
   {% if is_first_item or (current_institution != prev_institution) or (current_role != prev_role) %}
-    
     {% comment %} Close the previous table if it's not the first item {% endcomment %}
     {% if is_first_item == false %}
       </tbody>
       </table>
     {% endif %}
-    
+
     {% comment %} Start new institution and/or role headings {% endcomment %}
     {% if current_institution != prev_institution %}
       <h3>{{ display_names[current_institution] | default: current_institution }}</h3>
@@ -30,7 +29,7 @@
     <table class="table table-sm table-borderless">
       <tbody>
   {% endif %}
-  
+
   <tr>
     <td>{{ course.course_number }}</td>
     <td>
@@ -39,7 +38,7 @@
       {% else %}
         {{ course.course_title }}
       {% endif %}
-      
+
       {% if course.syllabus %}
         {% if course.syllabus contains '://' %}
           (<a href="{{ course.syllabus }}">syllabus</a>)
@@ -50,15 +49,14 @@
     </td>
     <td>{{ course.when }}</td>
   </tr>
-  
+
   {% assign prev_institution = current_institution %}
   {% assign prev_role = current_role %}
   {% assign is_first_item = false %}
-
 {% endfor %}
 
 {% comment %} Close the last table {% endcomment %}
 {% if courses_sorted.size > 0 %}
   </tbody>
-</table>
+  </table>
 {% endif %}

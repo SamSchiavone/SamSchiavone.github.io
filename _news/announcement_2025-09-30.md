@@ -5,7 +5,7 @@ inline: true
 related_posts: false
 ---
 
-Our preprint *Mumford-type Shimura curves contained in the Torelli locus* is now on [arXiv](https://arxiv.org/abs/2510.00093). We present two Shimura curves of Mumford type contained in the Torelli locus, one whose universal family is a hyperelliptic curve, and the other non-hyperelliptic, both of genus 4. The Jacobians of these curves are the first explicit examples of abelian varieties of the type described by Mumford in [his article](https://doi.org/10.1007/BF01350672) *A Note of Shimura's paper "Discontinuous Groups and Abelian Varieties"*.
+Our preprint _Mumford-type Shimura curves contained in the Torelli locus_ is now on [arXiv](https://arxiv.org/abs/2510.00093). We present two Shimura curves of Mumford type contained in the Torelli locus, one whose universal family is a hyperelliptic curve, and the other non-hyperelliptic, both of genus 4. The Jacobians of these curves are the first explicit examples of abelian varieties of the type described by Mumford in [his article](https://doi.org/10.1007/BF01350672) _A Note of Shimura's paper "Discontinuous Groups and Abelian Varieties"_.
 
 ---
 
